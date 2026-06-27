@@ -1,0 +1,11 @@
+{:paths ["src"]
+ ;; Zero-dep, portable .cljc. The kotoba Datom-log representation, shared by
+ ;; every actor that datafies results (vehicle-design-actor, aero-clj, the CAE
+ ;; seeds). Purpose: DATA REPRESENTATION only — no physics, no solver logic.
+ :deps {}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd"}}
+         :main-opts ["-m" "cognitect.test-runner"]
+         :exec-fn cognitect.test-runner.api/test}}}
