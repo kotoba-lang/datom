@@ -11,7 +11,7 @@
 
   Purpose: DATA REPRESENTATION only. No physics, no solver logic — those live
   in vphysics-clj and cae-solver-clj respectively."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn entity
   "Datomic-style entity (tx-map). `domain` is the attribute prefix (e.g.
